@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <h2>Caculate Pig</h2>
+            <div class="price">
+                <label for="price-input">Nhập giá hiện tại: </label>
+                <input type="text" class="price-input" id="price-input"> <span style="color: #fff;" >/ kg</span>
+            </div>
+            <div class="quantity">
+                <label for="quantity-input">Nhập số cân của từng con: </label>
+                <input type="text" class="quantity-input" id="quantity-input" placeholder="số cân...">
+                <button class="btn-add">
+                    <i class="fa-sharp fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="body-app">
+            <ul class="price-list">
+                <li class="price-items">
+                    <p class="price-text">Con thứ 1: <span>102</span></p>
+                    <button class="price-btn">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </li>
+                
+            </ul>
+            <div class="caculate-quantity">
+               
+            </div>
+            <div class="btn-group">
+                <button class="caculateTotal">
+                    Tính
+                </button>
+                <button class="deleteAll" >
+                    Xóa hết
+                </button>
+            </div>
+            <div class="showMoney">
+
+            </div>
+        </div>
+    </div>
+    <script src="./assets/app.js" ></script>
+</body>
+</html>
