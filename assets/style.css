@@ -71,6 +71,8 @@ header label {
     border: none;
     outline: none;
     border-radius: 6px;
+    display: block;
+    margin-top: 4px;
 }
 
 .btn-add:hover {
