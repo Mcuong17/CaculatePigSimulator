@@ -79,7 +79,7 @@ function cacutaleTotal() {
     if(inputPrice == '') {
         alert('Chưa nhập giá')
     } else {
-        var finalTotal = ((totalKg * inputPrice) - (+listKgs.length)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        var finalTotal = ((totalKg - (+listKgs.length) ) * (inputPrice)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
     }
     document.querySelector('.showMoney').style.display = 'block'
     document.querySelector('.showMoney').innerHTML = 
@@ -88,8 +88,8 @@ function cacutaleTotal() {
     <p>Tổng cân: ${totalKg.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} kg</p>
     <p>Tổng con: ${listKgs.length.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} con </p>
     <p>Giá: ${inputPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}đ</p>
-    <p>Thành tiền  = Tổng cân x Giá tiền - Tổng con =  </p>
-    <p> ${totalKg.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} x ${inputPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} -  ${listKgs.length.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} = ${finalTotal}đ  </p>
+    <p style = "font-size: 13px" >Thành tiền  = (Tổng cân - Tổng con) x Giá tiền </p>
+    <p> Thành tiền: (${totalKg.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} - ${listKgs.length.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}) x ${inputPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} = ${finalTotal}đ  </p>
    
 `
     }
